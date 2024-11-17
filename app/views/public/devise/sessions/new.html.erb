@@ -6,9 +6,7 @@
 
         <div class="mx-auto text-center">
             <p>ユーザー名と<br>パスワードを入力してください。</p>
-      
-            <p>メールアドレスと<br>パスワードを入力してください。</p>
-            </div>
+        </div>
 
         <%= form_with model: @user, url: user_session_path, local: true do |f| %>
           <div class="input-group mb-3">
@@ -16,13 +14,8 @@
               <span class="input-group-text" aria-hidden="true"><i class="fas fa-user"></i></span>
             </div>
             <%= f.text_field :name, autofocus: true, class: "form-control", placeholder: "ユーザー名" %>
-
-            <div class="input-group-prepend">
-              <span class="input-group-text" aria-hidden="true"><i class="fas fa-envelope"></i></span>
-            </div>
-            <%= f.email_field :email, autofocus: true, class:"form-control", id:"inputEmail", placeholder:"メールアドレス" %>
-  
           </div>
+          
           <div class="input-group mb-3">
             <div class="input-group-prepend">
               <span class="input-group-text" aria-hidden="true"><i class="fas fa-lock"></i></span>
